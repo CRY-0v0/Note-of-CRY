@@ -1,4 +1,4 @@
-# <center>前置条件
+# <center>Github使用
 
 ### 一、注册一个github账号
 - 网络好的时候，不需要挂加速器就可以成功注册了
@@ -28,6 +28,11 @@
 （3）连接github
 - 使用（默认）浏览器使github处于在线状态
 - 用VSC连接github
+- 注：如果连接不上，可以考虑在终端输入：
+git config --global http.proxy http://127.0.0.1:7890
+git config --global https.proxy http://127.0.0.1:7890
+
+> 127.0.0.1:7890 是加速器的默认的地址（127.0.0.1）和端口（7890）。具体还需确认一下更自己的是否一致。
 
 ### 三、指令集
 
@@ -40,9 +45,10 @@
 ### 四、相关操作与信息
 
 1. 一些重要的按键在更改右边
+
 2. 更改下面的“消息”框是推送时，发送的信息。注意，可以写入指令。
 
-3. 由github到VSC：
+3. 创建库，由github到VSC：
 - 创建文件夹，remote（远程）到github的对应仓库
 
 
@@ -55,13 +61,16 @@
 
 2. 配置
 - “.gitignore” 文件，用于==排除==文件和文件夹
-- 在setting中设置Rules，branch ruleset
+- （这一步由库主来设置）在setting中设置Rules，branch ruleset
 
 Enforcement Status（执行）设置为 Active（启用）
 
 设置Target branches 规则，Add target -> Include by pattern
 在默认的基础上，推荐：
-Require a pull request before merging
+Require a pull request before merging -> Required approvals 设置位1
+
+> save时，如果有弹出警告怎么办：对于私有库，需要4美元/月。对于公开库，则不需要。将私有库设置位公开库的方式如下：
+> General（在左侧） 中的 Danger Zone（最下面） 中，在Change repository visibility 框内点击 Change visibility -> Change to public
 
 3. 操作
 
